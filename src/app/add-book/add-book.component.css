@@ -1,0 +1,19 @@
+input{
+    width: 220px;
+}
+.row{
+    --bs-gutter-x: 0rem;
+}
+.container{
+    width: 500px;
+    margin: auto;
+}
+h5{
+    margin-top: 10px;
+}
+.Submit{    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+    margin-right: 117px;
+}

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row backRow">
+        <a class="btn" routerLink="/home">Back</a>
+
+    </div>
+<div class="card">
+    <article class="card-body">
+    
+    <h4 class="card-title mb-4 mt-1">Sign in</h4>
+    <form #libraran="ngForm" (ngSubmit)="LibraranSite(libraran)" novalidate>
+        <div class="form-group">
+            <label>Your email</label>
+            <input type="email" name="LEmail" class="form-control" required #EMail="ngModel" ngModel
+            placeholder="Email">
+            <div [hidden]="EMail.valid || EMail.untouched" class="alert alert-danger ErrorMsg">Enter Email Id </div>  
+        </div> <!-- form-group// -->
+        <div class="form-group">
+           
+            <label>Your password</label>
+            <input type="password" class="form-control"required  #pass="ngModel" name="pass1"ngModel            >
+            <div [hidden]="pass.valid || pass.untouched" class="alert alert-danger ErrorMsg">Enter Password </div>  
+        </div>
+               
+        <!-- form-group// --> 
+        <a class="float-right" href="#">Forgot?</a>
+        
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+        </div> <!-- form-group// -->                                                           
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    

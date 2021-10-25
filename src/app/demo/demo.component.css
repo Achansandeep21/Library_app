@@ -1,0 +1,30 @@
+input{
+    width: 220px;
+}
+.row{
+    --bs-gutter-x: 0rem;
+}
+.container{
+    width: 500px;
+    margin: auto;
+}
+h5{
+    margin-top: 10px;
+}
+.Submit{    display: block;
+    text-align: center;
+    align-items: center;
+}
+.Submit button{
+    width: 100px;
+    margin: 7px;
+    margin-right: 130px;
+}
+
+.ErrorMsg{
+    width: 220px;
+    padding: 5px;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}

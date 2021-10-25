@@ -1,0 +1,13 @@
+.container{
+    width: 500px;
+}
+ input{
+    width: 230px;
+    /* margin-left: 20px;*/
+ }
+ .Submit{     display: block;
+    text-align: center;
+    align-items: center;
+    margin: 3px;
+    margin-right: 100px;
+ }

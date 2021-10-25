@@ -1,0 +1,68 @@
+<div class="Session">
+    <div class="container">
+        <h5>Adding the Books </h5>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Book Name</label>
+                <input type="text" formControlName="BookName" class="form-control" [ngClass]="{ 'is-invalid': 
+                submitted && f.BookName.errors }" />
+                <div *ngIf="submitted && f.BookName.errors" class="invalid-feedback">
+                    <div *ngIf="f.BookName.errors.required">Book Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Book Author</label>
+                <input type="text" formControlName="BookAuthor" class="form-control" [ngClass]="{ 'is-invalid': 
+                submitted && f.BookAuthor.errors }" />
+                <div *ngIf="submitted && f.BookAuthor.errors" class="invalid-feedback">
+                    <div *ngIf="f.BookAuthor.errors.required">Author Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Quantity</label>
+                <input type="number" formControlName="Quantity" class="form-control" [ngClass]="{ 'is-invalid': 
+                submitted && f.Quantity.errors }" />
+                <div *ngIf="submitted && f.Quantity.errors" class="invalid-feedback">
+                    <div *ngIf="f.Quantity.errors.required">Quantity required</div>
+                </div>
+            </div>
+            
+            <div class="form-group Submit">
+                <button  class="btn btn-primary">Register</button>
+            </div>
+            
+
+
+       </form>
+        
+    </div>
+    </div>
+    <br/><br/><br/>
+
+
+    <!--
+        <form #ABook="ngForm" (ngSubmit)="Abook(ABook)" novalidate>
+        <div class="form-group">
+            <label>Book Name</label>
+            <input type="text" class="form-control" required #Bookname="ngModel" name="Books_Name"ngModel
+            placeholder="Enter Book name">
+            <div [hidden]="Bookname.valid || Bookname.untouched" class="alert alert-danger ErrorMsg">Enter Book Name</div>
+        </div>
+
+        <div class="form-group">
+            <label>Book Author</label>
+            <input type="text" class="form-control" required  #BookAuthor="ngModel" name="Books_Author" ngModel
+             placeholder="Enter Book Author">
+             <div [hidden]="BookAuthor.valid || BookAuthor.untouched" class="alert alert-danger ErrorMsg">Enter Author Name</div> 
+        </div>
+        <div class="form-group">
+            <label>Enter Quantity</label>
+            <input type="number" class="form-control" required #BookQuantity="ngModel" name="Quantity" ngModel
+            placeholder="Enter quantity">
+            <div [hidden]="BookQuantity.valid || BookQuantity.untouched" class="alert alert-danger ErrorMsg">Enter Quantity Of Books</div>
+        </div>
+        <div class="row Submit form-group">
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+    -->

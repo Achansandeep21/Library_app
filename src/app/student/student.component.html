@@ -1,0 +1,28 @@
+<div class="session">
+<div class="container">
+    
+    <div class="row backRow">
+        <a class="btn" routerLink="/home">Back</a>
+
+    </div>
+<div class="card">
+    <article class="card-body">
+    
+    <h4 class="card-title mb-4 mt-1">Welcome to Student</h4>
+    <form #Student="ngForm" (ngSubmit)="StudentPage(Student)" novalidate>
+        <div class="form-group">
+            <label>Student ID :</label>
+            <input  type="text" name="Studenti/p" class="form-control" required #Std="ngModel" ngModel
+            placeholder="Enter ID">
+            <div [hidden]="Std.valid || Std.untouched" class="alert alert-danger ErrorMsg">Enter Student ID </div>     
+        </div> <!-- form-group// -->
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> submit  </button>
+        </div> <!-- form-group// -->                                                           
+        
+                   
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    

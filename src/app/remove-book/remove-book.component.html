@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+            <h3>Remove Books</h3> 
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Book Name</label>
+                <input type="text" formControlName="RemoveBName" class="form-control" [ngClass]="{ 'is-invalid': 
+                submitted && f.RemoveBName.errors }" />
+                <div *ngIf="submitted && f.RemoveBName.errors" class="invalid-feedback">
+                    <div *ngIf="f.RemoveBName.errors.required">Book Name is required</div>
+                </div>
+            </div>
+             
+            <div class="form-group Submit">
+            
+                <button  class="btn btn-primary remove">Register</button>
+            </div>
+           
+       
+    </form>
+    <!--
+    <div class="row remove">
+        <button type="button" class="btn btn-primary">Remove</button>
+    </div>-->
+   
+
+    </div>
+    <br/>
